@@ -1,11 +1,11 @@
 # Ariel Komen
 # BIN-1d
-#
+# 
 def main():
     tekst = '/home/cole/Downloads/yeast_genes.csv'
     d2_lijst = read_file(tekst)
     geveriveerd, twijfelachtig, accesiecode_genen = not_validated(d2_lijst)
-    #print(accesiecode_genen)
+    
     ion = ion_involved(d2_lijst)
     
     print("-"*50)
@@ -39,8 +39,7 @@ def not_validated(lijst):
     geveriveerd = 0
     twijfelachtig = 0
 
-    #print(lijst[0:][1:])
-    #print(len(lijst))
+    
 
     for regel in lijst[0:]:
         if regel[1] == "Verified":
@@ -71,7 +70,7 @@ def ion_involved(lijst):
     print(twijfelachtig)
            
     print(twijfelachtig)
-    #print(non_geveriveerde_lijst)
+    
     ion = 0
     de_rest = 0
     ion_processen = []
@@ -97,19 +96,5 @@ def ion_involved(lijst):
     #print("dit zijn de biologische en metabolische processen: ", de_rest)
 
     return ion
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 main()
